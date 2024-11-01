@@ -13,4 +13,9 @@
     <string name="events_clicked">Events Clicked</string>
     <string name="feedback_clicked">Feedback Clicked</string>
     <string name="resources_clicked">Resources clicked</string>
+    <string name="banciu_diana_tips_text">     Pentru a avea o experienta cat mai placuta ca si voluntar, este important sa respecti anumite lucruri. Nu ti face griji, mai jos gasesti atasate sfaturile necesare pentru a ti transforma voluntariatul intr-o experienta cat mai placuta.</string>
+    <string name="banciu_diana_descriere_poza_maini_voluntari">Poza maini voluntari</string>
+    <string name="banciu_diana_btn_text_motive">Motive sa devii voluntar</string>
+    <string name="banciu_diana_btn_practici">Sfaturi si practici bune</string>
+    <string name="banciu_diana_tv_spor">Spor!</string>
 </resources>

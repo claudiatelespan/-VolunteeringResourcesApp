@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/banciu_diana_resources"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResourcesActivity">
+
+
+    <!--Acum pun imaginea-->
+    <ImageView
+        android:id="@+id/banciu_diana_iv_volunteer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/banciu_diana_volunteer_photo"
+        android:contentDescription="@string/banciu_diana_descriere_poza_maini_voluntari"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+    />
+
+    <!--text view ul cu introducerea-->
+    <TextView
+        android:id="@+id/banciu_diana_tipsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/banciu_diana_tips_text"
+        android:textSize="16sp"
+        android:textColor="#003366"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/banciu_diana_iv_volunteer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+    />
+
+
+    <Button
+        android:id="@+id/banciu_diana_btn_motive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+
+        android:text="@string/banciu_diana_btn_text_motive"
+        app:layout_constraintTop_toBottomOf="@+id/banciu_diana_tipsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+    />
+
+    <Button
+        android:id="@+id/banciu_diana_btn_practici"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/banciu_diana_btn_practici"
+        app:layout_constraintTop_toBottomOf="@id/banciu_diana_btn_motive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    />
+
+
+    <TextView
+        android:id="@+id/banciu_diana_tv_spor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/banciu_diana_tv_spor"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/banciu_diana_btn_practici"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
