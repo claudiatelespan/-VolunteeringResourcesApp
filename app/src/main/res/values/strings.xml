@@ -28,8 +28,10 @@
     <string name="addFeedback_trimite">Trimite</string>
     <string name="addFeedbackActivity_nume_invalid_minim_3_caractere_necesare">Nume Invalid. Minim 3 caractere necesare</string>
     <string name="addFeedbackActivity_comentariile_trebuie_sa_se_incadreze_in_250_de_caractere">Comentariile trebuie sa se incadreze in 250 de caractere</string>
+    <string name="adauga_feedback">Adauga</string>
 
     <string-array name="add_events">
-
+        <item>Strangere fonduri</item>
+        <item>Academia Sperantei</item>
     </string-array>
 </resources>

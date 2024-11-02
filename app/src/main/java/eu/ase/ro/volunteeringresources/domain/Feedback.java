@@ -75,13 +75,11 @@ public class Feedback implements Serializable {
 
     @Override
     public String toString() {
-        return "Feedback{" +
-                " name='" + name + '\'' +
-                ", event='" + event + '\'' +
-                ", sugestii='" + sugestii + '\'' +
-                ", comentarii='" + comentarii + '\'' +
-                ", rating=" + rating +
-                ", participareViitoareEvenimente=" + participareViitoareEvenimente +
-                '}';
+        return "Feedback de la: " + name + '\n' +
+                "Evenimentul: " + event + '\n' +
+                "Sugestii: " + sugestii + '\n' +
+               "Comentarii: " + comentarii + '\n' +
+                "Rating: " + rating + '\n' +
+                "Participare Viitoare Evenimente: " + participareViitoareEvenimente;
     }
 }
