@@ -13,4 +13,8 @@
     <string name="events_clicked">Events Clicked</string>
     <string name="feedback_clicked">Feedback Clicked</string>
     <string name="resources_clicked">Resources clicked</string>
+    <string name="main_logo_voluntapp">Logo VoluntApp</string>
+    <string name="main_toolbar_title_voluntapp">VoluntApp</string>
+    <string name="main_toolbar_toggle_dark_theme">Toggle Dark Theme</string>
+    <string name="main_sign_up_button">Sign Up Button</string>
 </resources>
