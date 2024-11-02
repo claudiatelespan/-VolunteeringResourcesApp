@@ -1,20 +1,24 @@
 package eu.ase.ro.volunteeringresources;
 
 public class Persoana {
-    private final int id;
+    private int cnp;
     private String name;
     private int age;
     private String college;
 
-    public Persoana(int id, String name, int age, String college) {
-        this.id = IdGenerator.generatorId();
+    public Persoana(int cnp, String name, int age, String college) {
+        this.cnp = cnp;
         this.name = name;
         this.age = age;
         this.college = college;
     }
 
-    public int getId() {
-        return id;
+    public int getCnp() {
+        return cnp;
+    }
+
+    public void setCnp(int cnp) {
+        this.cnp = cnp;
     }
 
     public String getName() {
@@ -44,7 +48,7 @@ public class Persoana {
     @Override
     public String toString() {
         return "Persoana{" +
-                "id=" + id +
+                "cnp=" + cnp +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", college='" + college + '\'' +

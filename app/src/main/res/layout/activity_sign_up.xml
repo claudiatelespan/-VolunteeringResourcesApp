@@ -112,7 +112,7 @@
 
   
   <Button
-      android:id="@+id/tertes_raluca_signup"
+      android:id="@+id/tertes_raluca_btn_signup"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       app:layout_constraintTop_toBottomOf="@id/tertes_raluca_add_college"
