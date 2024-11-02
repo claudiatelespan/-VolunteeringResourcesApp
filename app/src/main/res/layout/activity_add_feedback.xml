@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFeedbackActivity">
+
+    <TextView
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_tv_title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/addFeedback_feedback"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_til_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_tv_title"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stroe_ioana_ruxandra_addFeedback_tiet_name"
+            android:hint="@string/addFeedback_nume_prenume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_tv_eveniment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_til_name"
+        android:layout_margin="8dp"
+        android:text="@string/addFeedback_alege_evenimentul_pentru_care_vrei_sa_oferi_feedback"
+        />
+
+    <Spinner
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_spn_eveniment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:minHeight="48dp"
+        android:entries="@array/add_events"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_tv_eveniment"/>
+
+    <TextView
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_tv_raspuns"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_spn_eveniment"
+        android:text="@string/addFeedback_pe_viitor_ai_mai_participa_la_un_astfel_de_eveniment"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_rg_raspuns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_tv_raspuns"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+        <RadioButton
+            android:id="@+id/stroe_ioana_ruxandra_addFeedback_rb_da"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/addFeedback_da"/>
+        <RadioButton
+            android:id="@+id/stroe_ioana_ruxandra_addFeedback_rb_nu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/addFeedback_nu"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_tv_sugestii"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_rg_raspuns"
+        android:text="@string/addFeedback_ai_vreo_sugestie_pentru_mbun_t_irea_evenimentului"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_til_sugestii"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_tv_sugestii"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stroe_ioana_ruxandra_addFeedback_tiet_sugestii"
+            android:hint="@string/addFeedback_sugestii"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_tv_comentarii"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_til_sugestii"
+        android:text="@string/addFeedback_nu_te_am_ntrebat_dar_vrei_s_ne_spui"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_til_comentarii"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_tv_comentarii"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stroe_ioana_ruxandra_addFeedback_tiet_comentarii"
+            android:hint="@string/addFeedback_comentarii"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_tv_rating"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_til_comentarii"
+        android:text="@string/addFeedback_ce_nota_ati_oferi_acestui_eveniment"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RatingBar
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_rb_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stroe_ioana_ruxandra_addFeedback_tv_rating"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:rating="1"
+        android:isIndicator="false"
+        android:contentDescription="@string/addFeedback_selectati_numarul_de_stele"/>
+
+    <Button
+        android:id="@+id/stroe_ioana_ruxandra_addFeedback_btn_trimite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/addFeedback_trimite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
