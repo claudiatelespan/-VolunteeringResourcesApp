@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/ScreenBackground"
     tools:context=".MainActivity"
 
     >
@@ -17,7 +18,7 @@
             android:id="@+id/tascu_daniel_main_toolbar"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="?attr/colorPrimary"
+            android:background="#6A5ACD"
             android:paddingTop="4dp"
             app:popupTheme="@style/Theme.VolunteeringResources.PopupOverlay">
 
@@ -51,17 +52,22 @@
                     android:textStyle="bold" />
 
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/tascu_daniel_fab_dark_theme_main"
+
+                <androidx.appcompat.widget.SwitchCompat
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/banciu_diana_switchDarkTheme"
                     android:layout_marginEnd="16dp"
-                    android:layout_weight="0.5"
-                    android:contentDescription="@string/main_toolbar_toggle_dark_theme"
-                    android:src="@drawable/baseline_dark_mode_24"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_marginBottom="0dp"
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"/>
 
             </LinearLayout>
+            
+
+
+
+
 
         </androidx.appcompat.widget.Toolbar>
 

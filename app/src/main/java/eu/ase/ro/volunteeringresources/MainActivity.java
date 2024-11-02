@@ -1,5 +1,7 @@
 package eu.ase.ro.volunteeringresources;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +15,8 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
@@ -30,6 +34,12 @@ import eu.ase.ro.volunteeringresources.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
+    SwitchCompat switchMode;
+    boolean nightMode;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
+
     private NavigationView navigationView;
     private ListView listview;
     private List<EvenimentVoluntariat> evenimente;
@@ -50,6 +60,29 @@ public class MainActivity extends AppCompatActivity {
         configNavigation();
         navigationView = findViewById(R.id.tascu_daniel_nav_view);
         navigationView.setNavigationItemSelectedListener(getItemSelectedEvent());
+        switchMode=findViewById(R.id.banciu_diana_switchDarkTheme);
+        sharedPreferences= getSharedPreferences( "MODE", Context.MODE_PRIVATE);
+        nightMode=sharedPreferences.getBoolean("nightMode",false);
+        if (nightMode)
+        {
+            switchMode.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        switchMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(nightMode){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor=sharedPreferences.edit();
+                    editor.putBoolean("nightMode",false);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor=sharedPreferences.edit();
+                    editor.putBoolean("nightMode",true);
+                }
+                editor.apply();
+            }
+        });
     }
 
     private void initializareEvenimente() {

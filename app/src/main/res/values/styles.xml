@@ -8,7 +8,7 @@
         <item name="colorPrimaryDark">#388E3C</item> <!-- Un verde închis pentru variantele întunecate -->
         <item name="colorPrimaryVariant">#81C784</item> <!-- Un verde pastel pentru o variantă complementară -->
         <item name="colorOnPrimary">#FFFFFF</item>
->
+        >
         <item name="colorSecondary">#FF9800</item> <!-- Un portocaliu vibrant pentru accentuare -->
         <item name="colorSecondaryVariant">#F57C00</item> <!-- Un portocaliu mai închis -->
         <item name="colorOnSecondary">#000000</item> <!-- Text negru pe fundal secundar -->
