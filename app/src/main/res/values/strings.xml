@@ -19,6 +19,7 @@
     <string name="signup_name">Name</string>
     <string name="signup_title">SignUp</string>
     <string name="Signup_btn_signup">Signup</string>
+    <string name="signup_cnp">CNP</string>
 
     <string-array name="add_college">
         <item>Csie</item>

@@ -29,9 +29,8 @@
       android:textColor="@color/black">
   </TextView>
 
-
   <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/tertes_raluca_add_name"
+      android:id="@+id/tertes_raluca_add_cnp"
 
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -41,6 +40,30 @@
       app:layout_constraintStart_toStartOf="parent"
 
       app:layout_constraintTop_toBottomOf="@id/tertes_raluca_titlu">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tertes_raluca_til_cnp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="number"
+        android:hint="@string/signup_cnp">
+    </com.google.android.material.textfield.TextInputEditText>
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tertes_raluca_add_name"
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginHorizontal="8dp"
+      app:layout_constraintEnd_toStartOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+
+      app:layout_constraintTop_toBottomOf="@id/tertes_raluca_add_cnp">
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/tertes_raluca_til_name"
 
