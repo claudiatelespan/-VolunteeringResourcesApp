@@ -13,4 +13,19 @@
     <string name="events_clicked">Events Clicked</string>
     <string name="feedback_clicked">Feedback Clicked</string>
     <string name="resources_clicked">Resources clicked</string>
+
+    <string name="signup_txtV_college">College</string>
+    <string name="signup_age">Age</string>
+    <string name="signup_name">Name</string>
+    <string name="signup_title">SignUp</string>
+    <string name="Signup_btn_signup">Signup</string>
+
+    <string-array name="add_college">
+        <item>Csie</item>
+        <item>Cig</item>
+        <item>Bt</item>
+        <item>Fabiz</item>
+        <item>Famp</item>
+        <item>Rei</item>
+    </string-array>
 </resources>
