@@ -3,14 +3,14 @@ package eu.ase.ro.volunteeringresources;
 public class Persoana {
     private final int id;
     private String name;
-    private int varsta;
-    private String facultate;
+    private int age;
+    private String college;
 
-    public Persoana(int id, String name, int varsta, String facultate) {
+    public Persoana(int id, String name, int age, String college) {
         this.id = IdGenerator.generatorId();
         this.name = name;
-        this.varsta = varsta;
-        this.facultate = facultate;
+        this.age = age;
+        this.college = college;
     }
 
     public int getId() {
@@ -25,20 +25,20 @@ public class Persoana {
         this.name = name;
     }
 
-    public int getVarsta() {
-        return varsta;
+    public int getAge() {
+        return age;
     }
 
-    public void setVarsta(int varsta) {
-        this.varsta = varsta;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getFacultate() {
-        return facultate;
+    public String getCollege() {
+        return college;
     }
 
-    public void setFacultate(String facultate) {
-        this.facultate = facultate;
+    public void setCollege(String college) {
+        this.college = college;
     }
 
     @Override
@@ -46,8 +46,8 @@ public class Persoana {
         return "Persoana{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", varsta=" + varsta +
-                ", facultate='" + facultate + '\'' +
+                ", age=" + age +
+                ", college='" + college + '\'' +
                 '}';
     }
 
