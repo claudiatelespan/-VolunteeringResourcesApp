@@ -14,6 +14,29 @@
     <string name="feedback_clicked">Feedback Clicked</string>
     <string name="resources_clicked">Resources clicked</string>
 
+    <string name="addFeedback_feedback">Feedback</string>
+    <string name="addFeedback_nume_prenume">Nume Prenume</string>
+    <string name="addFeedback_alege_evenimentul_pentru_care_vrei_sa_oferi_feedback">Alege evenimentul pentru care vrei sa oferi feedback</string>
+    <string name="addFeedback_pe_viitor_ai_mai_participa_la_un_astfel_de_eveniment">Pe viitor ai mai participa la un astfel de eveniment?</string>
+    <string name="addFeedback_da">Da</string>
+    <string name="addFeedback_nu">Nu</string>
+    <string name="addFeedback_ai_vreo_sugestie_pentru_mbun_t_irea_evenimentului">Ai vreo sugestie pentru îmbunătățirea evenimentului?</string>
+    <string name="addFeedback_sugestii">Sugestii</string>
+    <string name="addFeedback_nu_te_am_ntrebat_dar_vrei_s_ne_spui">Nu te-am întrebat, dar vrei să ne spui...</string>
+    <string name="addFeedback_comentarii">Comentarii</string>
+    <string name="addFeedback_ce_nota_ati_oferi_acestui_eveniment">Ce notă ați oferi acestui eveniment?</string>
+    <string name="addFeedback_selectati_numarul_de_stele">Selectati numarul de stele</string>
+    <string name="addFeedback_trimite">Trimite</string>
+    <string name="addFeedbackActivity_nume_invalid_minim_3_caractere_necesare">Nume Invalid. Minim 3 caractere necesare</string>
+    <string name="addFeedbackActivity_comentariile_trebuie_sa_se_incadreze_in_250_de_caractere">Comentariile trebuie sa se incadreze in 250 de caractere</string>
+    <string name="adauga_feedback">Adauga</string>
+
+    <string-array name="add_events">
+        <item>Strangere fonduri</item>
+        <item>Academia Sperantei</item>
+    </string-array>
+
+
 
     <string name="signup_txtV_college">College</string>
     <string name="signup_age">Age</string>
@@ -45,5 +68,6 @@
     <string name="main_toolbar_title_voluntapp">VoluntApp</string>
     <string name="main_toolbar_toggle_dark_theme">Toggle Dark Theme</string>
     <string name="main_sign_up_button">Sign Up Button</string>
+
 
 </resources>

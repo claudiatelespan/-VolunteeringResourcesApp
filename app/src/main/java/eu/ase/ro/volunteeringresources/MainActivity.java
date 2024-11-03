@@ -1,8 +1,12 @@
 package eu.ase.ro.volunteeringresources;
 
-import android.content.Context;
+
 import android.content.Intent;
+
+import android.content.Context;
+
 import android.content.SharedPreferences;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -15,11 +19,11 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
-
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -38,6 +42,7 @@ import java.util.List;
 
 
 import eu.ase.ro.volunteeringresources.databinding.ActivityMainBinding;
+
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -184,12 +189,13 @@ public class MainActivity extends AppCompatActivity {
             }
             else  if(item.getItemId() == R.id.nav_feedback){
                 Toast.makeText(getApplicationContext(), R.string.feedback_clicked,Toast.LENGTH_SHORT).show();
-                //de facut implementare pt deschis activitatea respectiva
+                Intent intent = new Intent(this, FeedbackActivity.class);
+                startActivity(intent);
             }
-            else  if(item.getItemId() == R.id.nav_resources){
-                Toast.makeText(getApplicationContext(), R.string.resources_clicked,Toast.LENGTH_SHORT).show();
-                //de facut implementare pt deschis activitatea respectiva
-            }
+//            else  if(item.getItemId() == R.id.nav_resources){
+//                Toast.makeText(getApplicationContext(), R.string.resources_clicked,Toast.LENGTH_SHORT).show();
+//                //de facut implementare pt deschis activitatea respectiva
+//            }
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         };
