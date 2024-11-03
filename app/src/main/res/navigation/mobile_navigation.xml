@@ -11,14 +11,21 @@
         android:label="@string/menu_events"
         tools:layout="@layout/activity_main"/>
 
-<!--    <activity-->
-<!--        android:id="@+id/nav_feedback"-->
-<!--        android:name="eu.ase.ro.volunteeringresources.FeedbackActivity"-->
-<!--        android:label="@string/menu_feedback" />-->
+
 
     <activity
         android:id="@+id/nav_resources"
         android:name="eu.ase.ro.volunteeringresources.ResourcesActivity"
         android:label="@string/menu_resources"
         tools:layout="@layout/activity_resources" />
+
+
+    <activity
+        android:id="@+id/nav_feedback"
+        android:name="eu.ase.ro.volunteeringresources.FeedbackActivity"
+        android:label="@string/menu_feedback" 
+        tools:layout="@layout/activity_feedback"/>
+
+
+
 </navigation>
