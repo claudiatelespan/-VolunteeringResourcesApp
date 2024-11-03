@@ -1,5 +1,6 @@
 package eu.ase.ro.volunteeringresources;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -42,13 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), R.string.events_clicked,Toast.LENGTH_SHORT).show();
                 //de facut implementare pt deschis activitatea respectiva
             }
-            else  if(item.getItemId() == R.id.nav_feedback){
-                Toast.makeText(getApplicationContext(), R.string.feedback_clicked,Toast.LENGTH_SHORT).show();
-                //de facut implementare pt deschis activitatea respectiva
-            }
+//            else  if(item.getItemId() == R.id.nav_feedback){
+//                Toast.makeText(getApplicationContext(), R.string.feedback_clicked,Toast.LENGTH_SHORT).show();
+//                //de facut implementare pt deschis activitatea respectiva
+//            }
             else  if(item.getItemId() == R.id.nav_resources){
                 Toast.makeText(getApplicationContext(), R.string.resources_clicked,Toast.LENGTH_SHORT).show();
                 //de facut implementare pt deschis activitatea respectiva
+                Intent intent = new Intent(this, ResourcesActivity.class);
+                startActivity(intent);
             }
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;

@@ -5,21 +5,20 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_events">
 
-    <fragment
+    <activity
         android:id="@+id/nav_events"
-        android:name="eu.ase.ro.volunteeringresources.ui.home.HomeFragment"
+        android:name="eu.ase.ro.volunteeringresources.MainActivity"
         android:label="@string/menu_events"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/activity_main"/>
 
-    <fragment
-        android:id="@+id/nav_feedback"
-        android:name="eu.ase.ro.volunteeringresources.ui.gallery.GalleryFragment"
-        android:label="@string/menu_feedback"
-        tools:layout="@layout/fragment_gallery" />
+<!--    <activity-->
+<!--        android:id="@+id/nav_feedback"-->
+<!--        android:name="eu.ase.ro.volunteeringresources.FeedbackActivity"-->
+<!--        android:label="@string/menu_feedback" />-->
 
-    <fragment
+    <activity
         android:id="@+id/nav_resources"
-        android:name="eu.ase.ro.volunteeringresources.ui.slideshow.SlideshowFragment"
+        android:name="eu.ase.ro.volunteeringresources.ResourcesActivity"
         android:label="@string/menu_resources"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/activity_resources" />
 </navigation>
