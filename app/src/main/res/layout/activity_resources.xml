@@ -36,7 +36,6 @@
         android:layout_marginEnd="50dp"
         android:text="@string/banciu_diana_tips_text"
         android:textSize="16sp"
-        android:textColor="@color/lavender"
         android:textStyle="italic"
         app:layout_constraintTop_toBottomOf="@+id/banciu_diana_iv_volunteer"
         app:layout_constraintStart_toStartOf="parent"

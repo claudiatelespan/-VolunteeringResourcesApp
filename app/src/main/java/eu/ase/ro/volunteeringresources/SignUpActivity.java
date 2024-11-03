@@ -15,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import eu.ase.ro.volunteeringresources.domain.Persoana;
+
 public class SignUpActivity extends AppCompatActivity {
 
     private TextInputEditText tietCNP;

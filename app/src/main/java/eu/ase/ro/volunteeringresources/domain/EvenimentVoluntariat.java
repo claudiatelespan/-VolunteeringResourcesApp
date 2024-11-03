@@ -1,4 +1,4 @@
-package eu.ase.ro.volunteeringresources;
+package eu.ase.ro.volunteeringresources.domain;
 
 import java.util.Date;
 
