@@ -30,6 +30,16 @@
         <item>Famp</item>
         <item>Rei</item>
     </string-array>
+    
+    <string-array name="add_event">
+        <item>TopUp</item>
+        <item>Start Smart</item>
+        <item>EduConcert</item>
+        <item>Eco Hack</item>
+        <item>Plantare pentru Viitor</item>
+
+
+    </string-array>
 
     <string name="main_logo_voluntapp">Logo VoluntApp</string>
     <string name="main_toolbar_title_voluntapp">VoluntApp</string>

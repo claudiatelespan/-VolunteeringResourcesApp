@@ -108,20 +108,20 @@ public class MainActivity extends AppCompatActivity {
     }//end onCreate
 
     private ActivityResultCallback<ActivityResult> getSignUpCallBack() {
-        return (result -> {
-           if(result.getResultCode() == RESULT_OK && result.getData() != null)
-           {
-               Persoana persoana = (Persoana) result.getData().getSerializableExtra(SignUpActivity.SIGN_UP_KEY);
-               listaPersoane.add(persoana);
-               Log.i("mainactivity","lista:" + listaPersoane);
-               Toast.makeText(getApplicationContext(),"Te-ai Inscris cu Succes", Toast.LENGTH_SHORT).show();
-           }
-//           else
-//           {
-//               Log.e("mainactivty", "persoana este nula");
-//           }
-        });
-
+        return result -> {
+            if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                Persoana persoana = (Persoana) result.getData().getSerializableExtra(SignUpActivity.SIGN_UP_KEY);
+                if (persoana != null) {
+                    listaPersoane.add(persoana);
+                    Log.i("mainactivity", "lista:" + listaPersoane);
+                    Toast.makeText(getApplicationContext(), "Te-ai Inscris cu Succes", Toast.LENGTH_SHORT).show();
+                } else {
+                    Log.e("mainactivity", "Persoana returnata este null");
+                }
+            } else {
+                Log.e("mainactivity", "Rezultatul sau datele sunt null");
+            }
+        };
     }
 
     private void initializareEvenimente() {

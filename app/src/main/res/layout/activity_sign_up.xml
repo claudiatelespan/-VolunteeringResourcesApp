@@ -8,132 +8,112 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
-
   <TextView
-    android:id="@+id/tertes_raluca_titlu"
-
+      android:id="@+id/tertes_raluca_titlu"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-
       android:layout_marginTop="32dp"
       android:layout_margin="8dp"
-
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       android:gravity="center"
-
       android:text="@string/signup_title"
       android:textSize="24sp"
       android:textStyle="bold"
-      android:textColor="@color/black">
-  </TextView>
+      android:textColor="@color/black" />
 
   <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/tertes_raluca_til_add_cnp"
-
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="24dp"
       android:layout_marginHorizontal="8dp"
-      app:layout_constraintEnd_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-
       app:layout_constraintTop_toBottomOf="@id/tertes_raluca_titlu">
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/tertes_raluca_tiet_add_cnp"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:inputType="number"
-        android:hint="@string/signup_cnp">
-    </com.google.android.material.textfield.TextInputEditText>
+        android:hint="@string/signup_cnp" />
   </com.google.android.material.textfield.TextInputLayout>
-
-
 
   <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/tertes_raluca_til_add_name"
-
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
       android:layout_marginHorizontal="8dp"
-      app:layout_constraintEnd_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-
       app:layout_constraintTop_toBottomOf="@id/tertes_raluca_til_add_cnp">
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/tertes_raluca_tiet_add_name"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:inputType="text"
-        android:hint="@string/signup_name">
-    </com.google.android.material.textfield.TextInputEditText>
+        android:hint="@string/signup_name" />
   </com.google.android.material.textfield.TextInputLayout>
-
 
   <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tertes_raluca_til_add_varsta"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-
-      android:id="@+id/tertes_raluca_til_add_varsta"
-
       android:layout_marginTop="16dp"
       android:layout_marginHorizontal="8dp"
-      app:layout_constraintEnd_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/tertes_raluca_til_add_name">
+      app:layout_constraintTop_toBottomOf="@id/tertes_raluca_til_add_name">
+
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tertes_raluca_tiet_add_varsta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:id="@+id/tertes_raluca_tiet_add_varsta"
-
-        android:inputType="numberDecimal"
-        android:hint="@string/signup_age">
-
-    </com.google.android.material.textfield.TextInputEditText>
+        android:inputType="number"
+        android:hint="@string/signup_age" />
   </com.google.android.material.textfield.TextInputLayout>
 
+  <TextView
+      android:id="@+id/tertes_raluca_facultate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:textSize="16sp"
+      android:text="@string/signup_txtV_college"
+      android:textColor="@color/black"
+      android:gravity="center"
+      app:layout_constraintTop_toBottomOf="@id/tertes_raluca_til_add_varsta" />
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/tertes_raluca_facultate"
+  <Spinner
+      android:id="@+id/tertes_raluca_add_college"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="16dp"
+      android:minHeight="48dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tertes_raluca_facultate"
+      android:entries="@array/add_college" />
 
-    android:layout_marginTop="16dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+  <Spinner
+      android:id="@+id/tertes_raluca_add_event"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp"
+      android:minHeight="48dp"
+      android:entries="@array/add_event"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tertes_raluca_add_college"/>
 
-    android:textSize="16sp"
-    android:text="@string/signup_txtV_college"
-    android:textColor="@color/black"
-    android:gravity="center"
-    app:layout_constraintTop_toBottomOf="@id/tertes_raluca_til_add_varsta">
-</TextView>
-
-
-<Spinner
-    android:id="@+id/tertes_raluca_add_college"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="16dp"
-    android:minHeight="48dp"
-    
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/tertes_raluca_facultate"
-    android:entries="@array/add_college">
-</Spinner>
-
-  
   <Button
       android:id="@+id/tertes_raluca_btn_signup"
       android:layout_width="wrap_content"
@@ -142,8 +122,6 @@
       android:layout_marginTop="96dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      android:text="@string/Signup_btn_signup">
+      android:text="@string/Signup_btn_signup" />
 
-  </Button>
-
-  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
