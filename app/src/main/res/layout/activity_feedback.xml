@@ -5,13 +5,9 @@
     android:id="@+id/feedback_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/ScreenBackground"
     tools:context=".FeedbackActivity">
 
-<!--    <include-->
-<!--        android:id="@+id/feedback_bar_main"-->
-<!--        layout="@layout/app_bar_main"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" />-->
 
     <ListView
         android:id="@+id/telespan_claudia_feedback_lv"
@@ -19,7 +15,7 @@
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/telespan_claudia_add_feedback_btn"

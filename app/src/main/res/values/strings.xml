@@ -2,8 +2,8 @@
     <string name="app_name">VolunteeringResources</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">VoluntApp</string>
+    <string name="nav_header_subtitle">voluntapp@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -12,7 +12,7 @@
     <string name="menu_resources">Resources</string>
     <string name="events_clicked">Events Clicked</string>
     <string name="feedback_clicked">Feedback Clicked</string>
-    <string name="resources_clicked">Resources clicked</string>
+    <string name="resources_clicked">Resources Clicked</string>
 
     <string name="banciu_diana_tips_text">     Pentru a avea o experienta cat mai placuta ca si voluntar, este important sa respecti anumite lucruri. Nu ti face griji, mai jos gasesti atasate sfaturile necesare pentru a ti transforma voluntariatul intr-o experienta cat mai placuta.</string>
     <string name="banciu_diana_descriere_poza_maini_voluntari">Poza maini voluntari</string>
