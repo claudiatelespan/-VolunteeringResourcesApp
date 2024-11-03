@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    style="@style/ScreenBackground"
+    tools:context=".MainActivity"
+
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -12,24 +15,63 @@
         android:theme="@style/Theme.VolunteeringResources.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/tascu_daniel_main_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.VolunteeringResources.PopupOverlay" />
+            android:layout_height="48dp"
+            android:background="#6A5ACD"
+            android:paddingTop="4dp"
+            app:popupTheme="@style/Theme.VolunteeringResources.PopupOverlay">
+
+            <LinearLayout
+                android:id="@+id/tascu_daniel_ll_mainToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/tascu_daniel_iv_bar_main"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_logo_app_tascu_daniel"
+                    android:contentDescription="@string/main_logo_voluntapp" />
+
+
+                <TextView
+                    android:id="@+id/tascu_daniel_voluntapp_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/main_toolbar_title_voluntapp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/banciu_diana_switchDarkTheme"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track"/>
+
+            </LinearLayout>
+            
+
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="TODO"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

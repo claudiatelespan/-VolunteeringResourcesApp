@@ -13,6 +13,7 @@
     <string name="events_clicked">Events Clicked</string>
     <string name="feedback_clicked">Feedback Clicked</string>
     <string name="resources_clicked">Resources clicked</string>
+
     <string name="addFeedback_feedback">Feedback</string>
     <string name="addFeedback_nume_prenume">Nume Prenume</string>
     <string name="addFeedback_alege_evenimentul_pentru_care_vrei_sa_oferi_feedback">Alege evenimentul pentru care vrei sa oferi feedback</string>
@@ -34,4 +35,39 @@
         <item>Strangere fonduri</item>
         <item>Academia Sperantei</item>
     </string-array>
+
+
+
+    <string name="signup_txtV_college">College</string>
+    <string name="signup_age">Age</string>
+    <string name="signup_name">Name</string>
+    <string name="signup_title">SignUp</string>
+    <string name="Signup_btn_signup">Signup</string>
+    <string name="signup_cnp">CNP</string>
+
+    <string-array name="add_college">
+        <item>Csie</item>
+        <item>Cig</item>
+        <item>Bt</item>
+        <item>Fabiz</item>
+        <item>Famp</item>
+        <item>Rei</item>
+    </string-array>
+    
+    <string-array name="add_event">
+        <item>TopUp</item>
+        <item>Start Smart</item>
+        <item>EduConcert</item>
+        <item>Eco Hack</item>
+        <item>Plantare pentru Viitor</item>
+
+
+    </string-array>
+
+    <string name="main_logo_voluntapp">Logo VoluntApp</string>
+    <string name="main_toolbar_title_voluntapp">VoluntApp</string>
+    <string name="main_toolbar_toggle_dark_theme">Toggle Dark Theme</string>
+    <string name="main_sign_up_button">Sign Up Button</string>
+
+
 </resources>
