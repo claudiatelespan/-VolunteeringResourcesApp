@@ -14,6 +14,7 @@
     <string name="feedback_clicked">Feedback Clicked</string>
     <string name="resources_clicked">Resources clicked</string>
 
+
     <string name="signup_txtV_college">College</string>
     <string name="signup_age">Age</string>
     <string name="signup_name">Name</string>
@@ -29,4 +30,10 @@
         <item>Famp</item>
         <item>Rei</item>
     </string-array>
+
+    <string name="main_logo_voluntapp">Logo VoluntApp</string>
+    <string name="main_toolbar_title_voluntapp">VoluntApp</string>
+    <string name="main_toolbar_toggle_dark_theme">Toggle Dark Theme</string>
+    <string name="main_sign_up_button">Sign Up Button</string>
+
 </resources>
