@@ -1,5 +1,6 @@
 package eu.ase.ro.volunteeringresources;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,9 @@ public class SignUpActivity extends AppCompatActivity {
     private TextInputEditText tietAge;
     private Spinner spnCollege;
     private Button btnSignup;
-
+    public static final String SIGN_UP_KEY = "sign_up_key";
+    
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +38,14 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
         initComponents();
+        intent = getIntent();
     }
 
     private void initComponents()
     {
-        tietCNP=findViewById(R.id.tertes_raluca_add_cnp);
-        tietName=findViewById(R.id.tertes_raluca_add_name);
-        tietAge=findViewById(R.id.tertes_raluca_add_varsta);
+        tietCNP=findViewById(R.id.tertes_raluca_tiet_add_cnp);
+        tietName=findViewById(R.id.tertes_raluca_tiet_add_name);
+        tietAge=findViewById(R.id.tertes_raluca_tiet_add_varsta);
         spnCollege=findViewById(R.id.tertes_raluca_add_college);
         btnSignup=findViewById(R.id.tertes_raluca_btn_signup);
         btnSignup.setOnClickListener(getSaveSignup());
@@ -53,40 +57,68 @@ public class SignUpActivity extends AppCompatActivity {
         {
             if(isValid())
             {
-                Persoana person=builFromView();
+                Persoana person=buildFromView();
+//                if(person == null)
+//                {
+//                    Toast.makeText(this, "NULL PERSON", Toast.LENGTH_SHORT).show();
+//                }
+                intent.putExtra(SIGN_UP_KEY,person);
+                setResult(RESULT_OK, intent);
+                finish();
             }
 
         };
 
     }
 
-    private Persoana builFromView() {
-        Integer CNP=Integer.getInteger(tietCNP.getText().toString());
-        String Name=tietName.getText().toString();
-        Integer Age=Integer.getInteger(tietAge.getText().toString());
-        String College=(String) spnCollege.getSelectedItem();
+    private Persoana buildFromView() {
+        try {
+            int CNP = Integer.parseInt(tietCNP.getText().toString().trim());
+            String Name = tietName.getText().toString().trim();
+            int Age = Integer.parseInt(tietAge.getText().toString().trim());
+            String College = (String) spnCollege.getSelectedItem();
 
-        return new Persoana(CNP, Name, Age, College);
+            return new Persoana(CNP, Name, Age, College);
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Datele introduse sunt invalide. Verificați formatul CNP-ului și vârstei.", Toast.LENGTH_SHORT).show();
+            return null;
+        }
     }
 
-    private boolean isValid() {
-
+    private boolean isValid()
+    {
         if (tietCNP.getText() == null ||
                 tietCNP.getText().toString().trim().isEmpty() ||
                 tietCNP.getText().toString().trim().length() != 13 ||
-                !(tietCNP.getText().toString().trim().startsWith("5") || tietCNP.getText().toString().trim().startsWith("6")))
-        {
-
-            Toast.makeText(getApplicationContext(), "Invalid CNP. It must start with 5 or 6 and be exactly 13 digits long.",
-                    Toast.LENGTH_SHORT).show();
+                !(tietCNP.getText().toString().trim().startsWith("5") || tietCNP.getText().toString().trim().startsWith("6"))) {
+            Toast.makeText(getApplicationContext(), "CNP INVALID TREBUIE SA INCEAPA CU 5 SAU 6.", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (tietAge.getText() == null ||
-                    tietAge.getText().toString().trim().isEmpty()
-                    || Integer.getInteger(tietAge.getText().toString()) < 0) {
+
+        if (tietAge.getText() == null || tietAge.getText().toString().trim().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Vârsta nu poate fi goală", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+
+            int age = Integer.parseInt(tietAge.getText().toString().trim());
+            if (age < 0) {
                 Toast.makeText(getApplicationContext(), "Invalid age input", Toast.LENGTH_SHORT).show();
                 return false;
             }
+
+
+//        try {
+//            int age = Integer.parseInt(tietAge.getText().toString().trim());
+//            if (age < 0) {
+//                Toast.makeText(getApplicationContext(), "Invalid age input", Toast.LENGTH_SHORT).show();
+//                return false;
+//            }
+//        } catch (NumberFormatException e) {
+//            Toast.makeText(getApplicationContext(), "Vârsta trebuie să fie un număr valid", Toast.LENGTH_SHORT).show();
+//            return false;
+//        }
+
         return true;
     }
 

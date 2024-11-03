@@ -1,8 +1,10 @@
 package eu.ase.ro.volunteeringresources;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -10,9 +12,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -44,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
     private ListView listview;
     private List<EvenimentVoluntariat> evenimente;
 
+    private FloatingActionButton fabSignUp;
+    private ActivityResultLauncher<Intent> launcher;
+    private List<Persoana> listaPersoane = new ArrayList<>();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +73,15 @@ public class MainActivity extends AppCompatActivity {
         configNavigation();
         navigationView = findViewById(R.id.tascu_daniel_nav_view);
         navigationView.setNavigationItemSelectedListener(getItemSelectedEvent());
+
+        fabSignUp = findViewById(R.id.tascu_daniel_main_sign_up_fab);
+        fabSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(),SignUpActivity.class);
+            launcher.launch(intent);
+        });
+        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),getSignUpCallBack());
+
+
         switchMode=findViewById(R.id.banciu_diana_switchDarkTheme);
         sharedPreferences= getSharedPreferences( "MODE", Context.MODE_PRIVATE);
         nightMode=sharedPreferences.getBoolean("nightMode",false);
@@ -83,6 +105,23 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
             }
         });
+    }//end onCreate
+
+    private ActivityResultCallback<ActivityResult> getSignUpCallBack() {
+        return (result -> {
+           if(result.getResultCode() == RESULT_OK && result.getData() != null)
+           {
+               Persoana persoana = (Persoana) result.getData().getSerializableExtra(SignUpActivity.SIGN_UP_KEY);
+               listaPersoane.add(persoana);
+               Log.i("mainactivity","lista:" + listaPersoane);
+               Toast.makeText(getApplicationContext(),"Te-ai Inscris cu Succes", Toast.LENGTH_SHORT).show();
+           }
+//           else
+//           {
+//               Log.e("mainactivty", "persoana este nula");
+//           }
+        });
+
     }
 
     private void initializareEvenimente() {

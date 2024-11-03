@@ -1,6 +1,8 @@
 package eu.ase.ro.volunteeringresources;
 
-public class Persoana {
+import java.io.Serializable;
+
+public class Persoana implements Serializable {
     private int cnp;
     private String name;
     private int age;
