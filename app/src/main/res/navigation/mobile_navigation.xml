@@ -11,8 +11,6 @@
         android:label="@string/menu_events"
         tools:layout="@layout/activity_main"/>
 
-
-
     <activity
         android:id="@+id/nav_resources"
         android:name="eu.ase.ro.volunteeringresources.ResourcesActivity"

@@ -190,11 +190,12 @@ public class MainActivity extends AppCompatActivity {
                 //de facut implementare pt deschis activitatea respectiva
             }
 
-            else  if(item.getItemId() == R.id.nav_resources){
-                Toast.makeText(getApplicationContext(), R.string.resources_clicked,Toast.LENGTH_SHORT).show();
+            else  if(item.getItemId() == R.id.nav_resources) {
+                Toast.makeText(getApplicationContext(), R.string.resources_clicked, Toast.LENGTH_SHORT).show();
                 //de facut implementare pt deschis activitatea respectiva
                 Intent intent = new Intent(this, ResourcesActivity.class);
-              
+                startActivity(intent);
+            }
             else  if(item.getItemId() == R.id.nav_feedback){
                 Toast.makeText(getApplicationContext(), R.string.feedback_clicked,Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, FeedbackActivity.class);
